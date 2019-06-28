@@ -1,0 +1,9 @@
+name: Falcon Common
+type: module
+description: Common services and logic for Falcon distribution.
+core: 8.x
+package: Falcon
+dependencies:
+  - consumers
+  - features
+  - require_login

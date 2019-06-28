@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dashboard_donations_category
+title: Donations
+route_name: entity.commerce_order.collection
+route_parameters: {  }
+options:
+  query:
+    type: donation
+expanded: false
+menu_name: falcon-dashboard
+enabled: true
+parent: falcon.dashboard
+weight: -45
+description: 'Manage donations.'

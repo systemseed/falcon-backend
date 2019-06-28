@@ -1,0 +1,6 @@
+bundle: falcon_feature
+excluded:
+  - core.entity_view_mode.user.token
+  - field.field.user.user.commerce_remote_id
+  - field.storage.user.commerce_remote_id
+required: true

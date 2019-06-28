@@ -1,0 +1,9 @@
+name: 'Falcon Example feature'
+description: 'Example Falcon feature.'
+type: module
+core: 8.x
+dependencies:
+  - image
+  - menu_link_config
+version: 8.x-1.1
+package: Falcon Configurations

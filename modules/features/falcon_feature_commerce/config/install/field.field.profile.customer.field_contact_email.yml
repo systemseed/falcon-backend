@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_contact_email
+    - profile.type.customer
+  module:
+    - options
+id: profile.customer.field_contact_email
+field_name: field_contact_email
+entity_type: profile
+bundle: customer
+label: 'Contact by Email'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: not_asked
+default_value_callback: ''
+settings: {  }
+field_type: list_string

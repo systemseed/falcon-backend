@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies: {  }
+id: manager
+label: Manager
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access commerce administration pages'
+  - 'access commerce_order overview'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer commerce_order'
+  - 'administer commerce_payment'
+  - 'administer commerce_payment_gateway'
+  - 'administer nodes'
+  - 'administer users'
+  - 'bypass node access'
+  - 'change own username'
+  - 'create media'
+  - 'create source_code entities'
+  - 'create url aliases'
+  - 'delete any source_code entities'
+  - 'edit any source_code entities'
+  - 'schedule publishing of nodes'
+  - 'update any media'
+  - 'update donation commerce_order'
+  - 'use text format basic_html'
+  - 'view any customer profile'
+  - 'view any source_code entities'
+  - 'view commerce_order'
+  - 'view customer profile'
+  - 'view donation commerce_order'
+  - 'view profile'
+  - 'view scheduled content'
+  - 'view the administration theme'

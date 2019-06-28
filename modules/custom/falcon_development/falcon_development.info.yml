@@ -1,0 +1,9 @@
+name: Falcon Development
+type: module
+description: Modules and tools for development and local environments.
+core: 8.x
+package: Falcon
+
+dependencies:
+  - features
+  - falcon_feature_user

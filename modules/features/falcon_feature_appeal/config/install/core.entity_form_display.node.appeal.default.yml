@@ -1,0 +1,259 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.appeal.field_blocks
+    - field.field.node.appeal.field_donation_min_amount
+    - field.field.node.appeal.field_donation_suggested_amounts
+    - field.field.node.appeal.field_donation_type
+    - field.field.node.appeal.field_thankyou_email_body
+    - field.field.node.appeal.field_thankyou_email_subject
+    - field.field.node.appeal.field_thankyou_page_blocks
+    - field.field.node.appeal.field_thankyou_page_title
+    - node.type.appeal
+  module:
+    - field_group
+    - paragraphs_browser
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_appeal_landing_page:
+      children:
+        - field_blocks
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Appeal Landing Page'
+      region: content
+    group_donation_form:
+      children:
+        - field_donation_type
+        - field_donation_min_amount
+        - field_donation_suggested_amounts
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      format_settings:
+        label: 'Donation Form'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Donation Form'
+      region: content
+    group_thank_you_landing_page:
+      children:
+        - field_thankyou_page_title
+        - field_thankyou_page_blocks
+      parent_name: group_tabs
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Thank You Landing Page'
+      region: content
+    group_thank_you_email:
+      children:
+        - field_thankyou_email_subject
+        - field_thankyou_email_body
+      parent_name: group_tabs
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Thank You Email'
+      region: content
+    group_tabs:
+      children:
+        - group_appeal_landing_page
+        - group_donation_form
+        - group_thank_you_landing_page
+        - group_thank_you_email
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        label: Tabs
+        direction: vertical
+        id: ''
+        classes: ''
+      label: Tabs
+      region: content
+id: node.appeal.default
+targetEntityType: node
+bundle: appeal
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_blocks:
+    type: paragraphs_browser
+    weight: 1
+    settings:
+      title: Block
+      title_plural: Blocks
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: paragraphs_browser
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+      paragraphs_browser: content
+      modal_width: 80%
+      modal_height: auto
+    third_party_settings: {  }
+    region: content
+  field_donation_min_amount:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_donation_suggested_amounts:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_donation_type:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_thankyou_email_body:
+    weight: 28
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_thankyou_email_subject:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_thankyou_page_blocks:
+    type: paragraphs_browser
+    weight: 3
+    settings:
+      title: Block
+      title_plural: Blocks
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: paragraphs_browser
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+      paragraphs_browser: content
+      modal_width: 80%
+      modal_height: auto
+    third_party_settings: {  }
+    region: content
+  field_thankyou_page_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 11
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

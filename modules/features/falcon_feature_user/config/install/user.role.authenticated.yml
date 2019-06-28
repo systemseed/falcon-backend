@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'restful post commerce_decoupled_checkout_order_create'
+  - 'restful post commerce_decoupled_checkout_payment_create'
+  - 'restful post commerce_decoupled_checkout_payment_execute'
+  - 'restful post donation'
+  - 'view any source_code entities'
+  - 'view media'
